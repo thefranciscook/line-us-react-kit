@@ -14,7 +14,10 @@ React + Node app for controlling your Line-us robot drawing arm:
 ## Quick start
 
 1. Clone this repository
-2. Run ```npm install```
+2. Run ```npm install```:
+   - in the root directory, 
+   - in the client directory, and 
+   - in the server directory.
 3. In the root directory (one level up from client or server) run ```npm start```
 4. The web client will automatically open: http://localhost:3000
 

@@ -27,6 +27,43 @@ To create new drawing:
 import { moveTo, lineTo, dot, finish } from '../lib/drawingCommands'
 import drawPolygon from '../lib/drawPolygon';
 ```
+3. Export a function using the drawing commands to plot a picture. Example:
+```
+export const example = () => {
+  moveTo(900, 800);
+  lineTo(900, 200);
+
+  moveTo(1200, 800);
+  lineTo(1200, 200);
+
+  moveTo(1000, 500);
+  lineTo(1200, 500);
+
+  moveTo(1500, 700);
+  lineTo(1500, 200);
+
+  dot(1500, 800);
+
+  drawPolygon(1300, -500, 80, 3);
+  drawPolygon(1300, -500, 200, 3, Math.PI);
+  drawPolygon(1300, -500, 300, 5);
+
+  finish();
+};
+```
+4. In clients/src/drawings/drawings.ts add the new drawing to the list:
+```
+import { example } from "./originalExample";
+
+export const drawings :  { [key: string]: () => void } = {
+    'example': example,
+  };
+```
+5. In the web client select the new drawing from the drop down
+6. Hit the "Line-us Go" button
+7. Your drawing will be:
+    - previewed in the browser, and 
+    - the Line-us will plot your drawing in parallel (it has to be on the same local network as your computer)
 
 ## Attribution
 

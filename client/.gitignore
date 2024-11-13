@@ -1,0 +1,18 @@
+# Dependencies
+node_modules/
+
+# Build output
+build/
+dist/
+
+# Testing
+coverage/
+
+# System files
+.DS_Store
+
+# Next.js
+.next/
+
+# Tailwind CSS generated file
+tailwind.css

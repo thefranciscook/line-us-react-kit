@@ -2,8 +2,6 @@ import React, { useEffect, useRef, useState } from 'react';
 import io from 'socket.io-client';
 import { initializeCanvas, canvasMoveTo, canvasLineTo, canvasDot, canvasFinish, clearCanvas } from './lib/canvas';
 import { getItems } from './lib/commands';
-import { originalExample } from './drawings/originalExample';
-import { owlDrawing } from './drawings/owlDrawing';
 import { drawings } from './drawings/drawings';
 
 const socket = io('http://localhost:8081');
@@ -74,12 +72,6 @@ const DrawingApp: React.FC = () => {
   return (
     <div
       className="flex items-center justify-center max-h-screen h-full min-h-screen"
-    // style={{
-    //   backgroundImage: `url(${process.env.PUBLIC_URL}/paper1.jpg)`,
-    //   backgroundSize: 'cover',
-    //   backgroundRepeat: 'no-repeat',
-    //   backgroundPosition: 'center',
-    // }}
     >
 
       <div
